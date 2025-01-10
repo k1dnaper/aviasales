@@ -1,36 +1,30 @@
-import React, { useState } from "react"
+import React from "react"
 
 import { RadioFilter, Title, RadioInput, RadioLabel, LabelText } from "./styled.ts"
 
-const FilterRadio = () => {
-  const [selectedOption, setSelectedOption] = useState("")
-
-  const handleChange = (event) => {
-    setSelectedOption(event.target.value)
-  }
-
+const FilterRadio = ({ handleRadioFilterChange }) => {
   return (
     <RadioFilter>
       <Title>КОЛИЧЕСТВО ПЕРЕСАДОК</Title>
       <form>
         <RadioLabel>
-          <RadioInput type="checkbox" value="all" checked={selectedOption === "all"} onChange={handleChange} />
+          <RadioInput type="checkbox" value="all" onChange={() => handleRadioFilterChange("all")} />
           <LabelText>Все</LabelText>
         </RadioLabel>
         <RadioLabel>
-          <RadioInput type="checkbox" value="none" checked={selectedOption === "none"} onChange={handleChange} />
+          <RadioInput type="checkbox" value="none" onChange={() => handleRadioFilterChange("none")} />
           <LabelText>Без пересадок</LabelText>
         </RadioLabel>
         <RadioLabel>
-          <RadioInput type="checkbox" value="one" checked={selectedOption === "one"} onChange={handleChange} />
+          <RadioInput type="checkbox" value="one" onChange={() => handleRadioFilterChange("one")} />
           <LabelText>1 пересадка</LabelText>
         </RadioLabel>
         <RadioLabel>
-          <RadioInput type="checkbox" value="two" checked={selectedOption === "two"} onChange={handleChange} />
+          <RadioInput type="checkbox" value="two" onChange={() => handleRadioFilterChange("two")} />
           <LabelText>2 пересадки</LabelText>
         </RadioLabel>
         <RadioLabel>
-          <RadioInput type="checkbox" value="three" checked={selectedOption === "three"} onChange={handleChange} />
+          <RadioInput type="checkbox" value="three" onChange={() => handleRadioFilterChange("three")} />
           <LabelText>3 пересадки</LabelText>
         </RadioLabel>
       </form>

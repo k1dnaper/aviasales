@@ -5,34 +5,32 @@ export const RadioFilter = styled.div`
   border: 1px solid #dddddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 16px;
   width: 232px;
   height: 252px;
-  margin: 130px auto;
+  grid-area: 1 / 1 / 3 / 2;
 `
 export const Title = styled.h2`
   margin-bottom: 16px;
-  font-size: 18px;
+  margin-top: 16px;
+  font-size: 12px;
   text-align: center;
 `
 export const RadioInput = styled.input`
-  margin: 0 8px 0 0;
+  margin: 0 10px 0 0;
 `
 
 export const RadioLabel = styled.label`
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 22px;
+  padding-left: 20px;
   cursor: pointer;
 
-  &:hover ${RadioInput} {
-    background-color: #f0f0f0;
-  }
-
-  ${RadioInput}:checked + span {
+  &:hover {
     background-color: #f1fcff;
   }
 `
 export const LabelText = styled.span`
-  margin-left: 8px;
+  margin-left: 10px;
+  font-size: 13px;
 `

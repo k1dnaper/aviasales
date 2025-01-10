@@ -1,11 +1,20 @@
 import { styled } from "styled-components"
 
+export const MainPage = styled.section`
+  background-color: #f3f7fa;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  grid-column: 2 / 3;
+`
+
 export const Wrapper = styled.div`
   position: relative;
   background-color: white;
-  height: 184px;
-  width: 502px;
-  margin: 20px;
+  grid-column: 2;
+  height: 144px;
+  width: 462px;
   padding: 20px;
   border: 1px solid #dddddd;
   border-radius: 8px;
@@ -21,38 +30,38 @@ export const LogoImage = styled.img`
 export const Price = styled.div`
   font-size: 24px;
   color: #007bff;
-  margin-bottom: 10px;
   height: 40px;
+  font-weight: bold;
 `
 export const FlightDetails = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
   align-content: stretch;
 `
 
-export const FlightTitle = styled.h3`
-  font-size: 18px;
+export const FlightTitle = styled.div`
+  font-size: 12px;
   color: gray;
   margin: 5px 0;
 `
 
 export const FlightText = styled.p`
-  font-size: 18px;
-  color: black;
+  font-size: 14px;
+  color: #4a4a4a;
   margin: 5px 0;
   font-weight: bold;
 `
 
 export const FlightDuration = styled.div`
-  font-size: 18px;
+  font-size: 12px;
   color: gray;
   margin: 5px 0;
 `
 export const StopsText = styled.p`
-  font-size: 18px;
+  font-size: 14px;
   color: gray;
   margin: 5px 0;
 `
@@ -63,7 +72,7 @@ export const StopsContainer = styled.div`
 `
 
 export const StopsTextBold = styled.h3`
-  font-size: 18px;
-  color: black;
+  font-size: 14px;
+  color: #4a4a4a;
   margin: 5px 0;
 `
